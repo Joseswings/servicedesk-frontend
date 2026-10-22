@@ -1,0 +1,180 @@
+
+.tech-layout {
+  display: flex;
+  min-height: calc(100vh - 54px);
+  background: #f3f6fb;
+  color: #192c45;
+  font-family: Inter, system-ui, sans-serif;
+}
+.tech-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  padding: 28px 18px;
+  background: #12233b;
+  color: white;
+}
+.tech-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 38px;
+  color: #7de6d9;
+}
+.tech-brand div, .tech-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.tech-brand strong { color: white; font-size: 19px; }
+.tech-brand small, .tech-profile small { color: #a8bdd1; }
+.tech-profile {
+  padding: 18px 12px;
+  border-top: 1px solid #38506a;
+}
+.tech-profile span {
+  font-size: 11px;
+  color: #7de6d9;
+}
+.tech-menu {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background: #27425c;
+}
+.tech-main {
+  flex: 1;
+  min-width: 0;
+  padding: 36px;
+  max-width: 1450px;
+  margin: auto;
+}
+.tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 27px;
+}
+.tech-header span {
+  color: #0a8890;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+.tech-header h1 { margin: 9px 0; }
+.tech-header p { color: #687a92; }
+.tech-header button, .tech-ticket button,
+.tech-detail-heading button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 9px;
+  color: white;
+  background: #087e89;
+  cursor: pointer;
+}
+.tech-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+}
+.tech-stats article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  background: white;
+  border: 1px solid #e1e8f1;
+  border-radius: 15px;
+}
+.tech-stats svg { color: #088b92; }
+.tech-stats strong { font-size: 32px; }
+.tech-stats span { color: #687a92; font-size: 13px; }
+.tech-panel {
+  background: white;
+  border: 1px solid #e1e8f1;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 22px;
+}
+.tech-ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  border-top: 1px solid #e5ebf3;
+  padding: 20px 0;
+}
+.tech-ticket small { color: #07878c; }
+.tech-ticket h3 { margin: 8px 0; }
+.tech-ticket p { color: #66768d; }
+.tech-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b42338;
+}
+.tech-detail-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.tech-description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 18px;
+  background: #f2f6fb;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+.tech-pending {
+  margin-top: 22px;
+  color: #8a6519;
+  background: #fff4dd;
+  padding: 14px;
+  border-radius: 9px;
+}
+@media (max-width: 800px) {
+  .tech-layout { flex-direction: column; }
+  .tech-sidebar { width: auto; }
+  .tech-main { padding: 18px; }
+  .tech-header, .tech-ticket, .tech-detail-heading {
+    flex-wrap: wrap;
+  }
+  .tech-stats { grid-template-columns: 1fr; }
+}
+.tech-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.tech-actions button {
+  border: 0;
+  border-radius: 9px;
+  background: #087e89;
+  color: white;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.tech-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tech-success {
+  padding: 14px;
+  border-radius: 10px;
+  background: #e2f6ec;
+  color: #166534;
+  margin: 16px 0;
+}

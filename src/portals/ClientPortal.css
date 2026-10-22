@@ -1,0 +1,275 @@
+.client-layout {
+  display: flex;
+  min-height: calc(100vh - 54px);
+  background: #f3f6fb;
+  color: #1b2b43;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+.client-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: #12233b;
+  color: white;
+  padding: 28px 16px;
+}
+
+.client-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 6px 10px 35px;
+}
+
+.client-brand strong {
+  font-size: 19px;
+  color: white;
+}
+
+.client-brand span {
+  color: #8fd8d4;
+  font-size: 12px;
+}
+
+.client-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.client-sidebar nav button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #d0dbee;
+  text-align: left;
+  cursor: pointer;
+}
+
+.client-sidebar nav button:hover,
+.client-sidebar nav button.selected {
+  background: #27425c;
+  color: #7ce5db;
+}
+
+.client-main {
+  flex: 1;
+  min-width: 0;
+  max-width: 1450px;
+  padding: 36px;
+  margin: 0 auto;
+}
+
+.client-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.client-header span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #118b91;
+  font-weight: 800;
+}
+
+.client-header h1 {
+  margin: 9px 0;
+  color: #18304c;
+  font-size: clamp(25px, 3vw, 35px);
+}
+
+.client-header p {
+  color: #65778f;
+}
+
+.client-header button,
+.client-section-heading button,
+.client-empty button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 16px;
+  background: #087f89;
+  color: white;
+  cursor: pointer;
+}
+
+.client-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.client-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid #e2e9f2;
+  padding: 23px;
+}
+
+.client-summary svg {
+  color: #0b8e95;
+}
+
+.client-summary strong {
+  font-size: 31px;
+  color: #18304c;
+}
+
+.client-summary span {
+  color: #6a7890;
+  font-size: 13px;
+}
+
+.client-panel {
+  background: white;
+  border: 1px solid #e1e9f2;
+  border-radius: 16px;
+  padding: 25px;
+}
+
+.client-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.client-section-heading h2 {
+  margin: 0;
+  color: #18304c;
+}
+
+.client-ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.client-ticket {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  border: 1px solid #e4e9f1;
+  border-radius: 12px;
+  padding: 19px;
+}
+
+.client-ticket h3 {
+  margin: 9px 0;
+  color: #1a2f49;
+}
+
+.client-ticket p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.client-ticket-id {
+  font-size: 12px;
+  color: #11838b;
+  font-weight: 700;
+}
+
+.client-status {
+  border-radius: 20px;
+  padding: 7px 12px;
+  background: #e9eff8;
+  color: #34516f;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.status-in_progress {
+  background: #fff3d8;
+  color: #966500;
+}
+
+.status-resolved,
+.status-closed {
+  background: #def7ec;
+  color: #17734e;
+}
+
+.client-empty {
+  text-align: center;
+  padding: 40px 15px;
+  color: #64748b;
+}
+
+.client-empty svg {
+  color: #118b91;
+}
+
+.client-error {
+  color: #a32035;
+}
+
+.client-warning {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 17px 0;
+  border-radius: 10px;
+  padding: 13px;
+  background: #fff4d7;
+  color: #775615;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .client-layout {
+    flex-direction: column;
+  }
+
+  .client-sidebar {
+    width: auto;
+    padding: 17px;
+  }
+
+  .client-brand {
+    margin-bottom: 15px;
+  }
+
+  .client-sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .client-sidebar nav button {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .client-main {
+    padding: 18px;
+  }
+
+  .client-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .client-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .client-ticket {
+    flex-direction: column;
+  }
+}
