@@ -6,3 +6,4 @@ dist/
 *.respaldo
 *.before-*
 *.incompleto/
+ __pycache__/
